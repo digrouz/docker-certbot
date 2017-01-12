@@ -12,4 +12,4 @@ elif [ "$1" = 'certbot-renew' ]; then
    exec /usr/bin/certbot renew
 fi
 
-exec "$@"
+"$@"
