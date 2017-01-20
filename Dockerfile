@@ -16,13 +16,14 @@ RUN apk --no-cache upgrade && \
            /var/tmp/*
 
 ### Volume
-VOLUME ["/certs"]
+VOLUME ["/etc/letsencrypt"]
 
 ### Expose ports
-#EXPOSE 5050
+EXPOSE 80
+EXPOSE 443
 
 ### Running User: not used, managed by docker-entrypoint.sh
-#USER nginx
+#USER root
 
 ### Start certbot
 COPY ./docker-entrypoint.sh /
