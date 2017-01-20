@@ -45,5 +45,5 @@ This variable is mandatory and specifies a list of domains (comma separated)  fo
 
 ## Notes
 
-* The docker entrypoint will upgrade alpine at each startup.
+* The docker entrypoint will upgrade operating system at each startup.
 
