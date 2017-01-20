@@ -43,3 +43,7 @@ This variable is mandatory and specifies the mail that has to be used to generat
 
 This variable is mandatory and specifies a list of domains (comma separated)  for which a certificate should be generates
 
+## Notes
+
+* The docker entrypoint will upgrade alpine at each startup.
+
