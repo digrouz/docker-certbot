@@ -1,6 +1,5 @@
-# vim:set ft=dockerfile:
 FROM alpine:latest
-MAINTAINER DI GREGORIO Nicolas <nicolas.digregorio@gmail.com>
+LABEL maintainer "DI GREGORIO Nicolas <nicolas.digregorio@gmail.com>"
 
 ### Environment variables
 ENV LANG='en_US.UTF-8' \
