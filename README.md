@@ -54,7 +54,7 @@ This variable is mandatory and specifies a list of domains (comma separated)  fo
 ## Notes
 
 * The docker entrypoint can upgrade operating system at each startup. To enable this feature, just add `-e DOCKUPGRADE=1` at container creation.
-* This containeri uses the `standalone` authenticator methode which  may require to stop any webserver or container that expose port `80` and/or `443`.
+* This container uses the `standalone` authenticator methode which  may require to stop any webserver or container that expose port `80` and/or `443`.
 
 ## Issues
 
