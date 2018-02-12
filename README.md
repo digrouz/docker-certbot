@@ -1,7 +1,15 @@
-# docker-alp-certbot
-Installs cerbot into an Alpine Linux container
+# docker-certbot
+Installs cerbot into a Linux container
 
 ![certbot](https://certbot.eff.org/images/certbot-logo-1A.svg)
+
+## Tags
+Several tags are available:
+* `latest`: see `centos7`
+* `centos7`: [centos7/Dokerfile](https://github.com/digrouz/docker-certbot/blob/centos7/Dockerfile)
+* `alpine3.6`: [alpine3.6/Dokerfile](https://github.com/digrouz/docker-certbot/blob/alpine3.6/Dockerfile)
+* `alpine3.7`: [alpine3.7/Dokerfile](https://github.com/digrouz/docker-certbot/blob/alpine3.7/Dockerfile)
+
 
 ## Description
 
@@ -18,7 +26,7 @@ https://certbot.eff.org/
       -e DOCKMAILDOMAINS=<domains list> \
       -p 80:80 \
       -p 443:443 \
-      digrouz/docker-alp-certbot certbot
+      digrouz/docker-certbot certbot
 
 ### Renewing certificate
     docker run --name=certbot \
@@ -28,7 +36,7 @@ https://certbot.eff.org/
       -e DOCKMAILDOMAINS=<domains list> \
       -p 80:80 \
       -p 443:443 \
-      digrouz/docker-alp-certbot certbot-renew
+      digrouz/docker-certbot certbot-renew
 
 
 ## Environment Variables
@@ -45,5 +53,9 @@ This variable is mandatory and specifies a list of domains (comma separated)  fo
 
 ## Notes
 
-* The docker entrypoint will upgrade operating system at each startup.
+* The docker entrypoint can upgrade operating system at each startup. To enable this feature, just add `-e DOCKUPGRADE=1` at container creation.
+* This containeri uses the `standalone` authenticator methode which  may require to stop any webserver or container that expose port `80` and/or `443`.
 
+## Issues
+
+If you encounter an issue please open a ticket at [github](https://github.com/digrouz/docker-certbot/issues)
