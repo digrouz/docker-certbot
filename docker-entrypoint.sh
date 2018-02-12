@@ -84,7 +84,7 @@ if [ "${1}" == 'certbot' ]; then
     exec certbot certonly --verbose --noninteractive --quiet --standalone --agree-tos --email="${DOCKMAIL}" -d "${DOCKDOMAINS}" 
   fi
 elif [ "${1}" == 'certbot-renew' ]; then
-   exec /usr/bin/certbot renew
+   exec certbot renew
 else
   "$@"
 fi

@@ -17,7 +17,7 @@ RUN apk --no-cache upgrade && \
            /var/tmp/*
 
 ### Volume
-VOLUME ["/etc/letsencrypt", "/var/www/html"]
+VOLUME ["/etc/letsencrypt"]
 
 ### Expose ports
 EXPOSE 80
