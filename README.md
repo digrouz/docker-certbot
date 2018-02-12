@@ -43,6 +43,10 @@ https://certbot.eff.org/
 
 When you start the `certbot` image, you can adjust the configuration of the `certbot` instance by passing one or more environment variables on the `docker run` command line.
 
+### `DOCKUPGRADE`
+
+This variable is not mandatory and specifies if the container has to launch software update at startup or not. Valid values are `0` and `1`. It has default value `0`.
+
 ### `DOCKMAIL`
 
 This variable is mandatory and specifies the mail that has to be used to generate the certificates.
