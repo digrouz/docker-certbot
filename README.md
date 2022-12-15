@@ -3,14 +3,6 @@ Installs cerbot into a Linux container
 
 ![certbot](https://certbot.eff.org/images/certbot-logo-1A.svg)
 
-## Tags
-Several tags are available:
-* `latest`: see `centos7`
-* `centos7`: [centos7/Dokerfile](https://github.com/digrouz/docker-certbot/blob/centos7/Dockerfile)
-* `alpine3.6`: [alpine3.6/Dokerfile](https://github.com/digrouz/docker-certbot/blob/alpine3.6/Dockerfile)
-* `alpine3.7`: [alpine3.7/Dokerfile](https://github.com/digrouz/docker-certbot/blob/alpine3.7/Dockerfile)
-
-
 ## Description
 
 Certbot is an easy-to-use automatic client that fetches and deploys SSL/TLS certificates for your webserver. Certbot was developed by EFF and others as a client for Lets Encrypt and was previously known as the official Lets Encrypt client or the Let's Encrypt Python client. Certbot will also work with any other CAs that support the ACME protocol.
