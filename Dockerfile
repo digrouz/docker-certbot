@@ -1,4 +1,4 @@
-FROM alpine:3.7
+FROM alpine:3.17.0
 LABEL maintainer "DI GREGORIO Nicolas <ndigregorio@ndg-consulting.tech>"
 
 ### Environment variables
@@ -7,7 +7,8 @@ ENV LANG='en_US.UTF-8' \
     TERM='xterm' 
 
 ### Install Application
-RUN apk --no-cache upgrade && \
+RUN set -x && \
+    apk --no-cache upgrade && \
     apk add --no-cache --virtual=run-deps \
       certbot \
       bash \
